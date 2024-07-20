@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./about-us.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <!-- header -->
+    <header>
+        <h1>Horizon Seekers</h1>
+    <!-- модалка -->
+    <div class="modal" id="registration-modal">
+        <form class="form" action="">
+            <h1 class="form__title">LOGIN</h1>
+            <label  class="form__lable">Write your Username!</label>
+            <input type="name" class="form__name" id="username" placeholder="Your Username..." name="" id="">
+            
+            <label class="form__lable" for="">Write your Email!</label>
+            <input class="form__email" placeholder="Your Email..." type="email">
+            
+            <label class="form__lable" for="">Write your Password!</label>
+            <input class="form__pas" placeholder="Your password..." type="password">
+            
+            <label for="" class="form__lable">Write your Phone number</label>
+            <input type="tel" class="form__number" placeholder="your phone number">
+            
+            <div class="form__register">
+                    <input class="form__checked" type="checkbox" id="modal">
+                    
+                    
+                </div>
+            
+                
+              
+            <button class="form__btn" type="button">Зберегти</button>
+        </form>
+      </div>
+      
+      <!-- відкрити модалку -->
+      <button id="modal__btn" class="modal__btn">регистер</button>
+
+    </header>
+<!-- main -->
+<main>
+<div class="click__inform">Кількість кліків <span id="clickCount">0</span> на сайті</div>
+<button class="click_btn">Інформація про кількість кліків</button>
+        <div class="about-us">
+            <h1>Про нас</h1>
+            <ul> <h2>Ми пропонуємо широкий спектр послуг, включаючи:</h2>
+                <li><span>Індивідуальні та групові тури по всьому світу: Від пляжного відпочинку до екзотичних пригод, ми допоможемо вам спланувати ідеальну подорож, яка відповідатиме вашим інтересам та бюджету.</span></li>
+                <li><span>Авіаквитки та готелі:  Ми пропонуємо конкурентні ціни на авіаквитки та готелі по всьому світу.</span></li>
+                <li><span>Круїзи: Відкрийте для себе нові місця та насолоджуйтесь розкішним відпочинком на круїзному лайнері.</span></li>
+                <li><span>Спеціальні пропозиції: Ми постійно пропонуємо спеціальні пропозиції та знижки на тури, авіаквитки та готелі.</span></li>
+            </ul>
+            <ul> <h2>Чому обирати Horizon-Seekers?</h2>
+                <li><span>Досвідчені та кваліфіковані консультанти: Наші консультанти мають багаторічний досвід роботи в туристичній індустрії та готові допомогти вам спланувати ідеальну подорож.</span></li>
+                <li><span>Персональний підхід: Ми прислухаємося до ваших потреб та побажань, щоб створити для вас індивідуальний план подорожі.</span></li>
+                <li><span>Широкий спектр послуг: Ми пропонуємо широкий спектр послуг, щоб задовольнити всі ваші потреби.</span></li>
+                <li><span>Конкурентні ціни: Ми пропонуємо конкурентні ціни на всі наші послуги.</span></li>
+                <li><span>Надійність: Ми є надійним туристичним агентством, якому ви можете довірити планування вашої подорожі.</span></li>
+            </ul>
+            <p>З Horizon-Seekers ваші мрії про подорожі стають реальністю!
+
+                Зверніться до нас вже сьогодні, щоб розпочати планування вашої наступної подорожі!
+                
+            </p>
+        </div>
+
+        <div class="statist">
+
+            <div class="statict__first"  data-target="23973">
+               <h2><img src="./img/AirplaneTilt.png" alt=""> 23,973</h2>
+               <p>Travel to over 23 thousand locations around the world.</p>
+            </div>
+
+            <div class="statict__second" data-target="82000">
+                <h2><img src="./img/GlobeHemisphereEast.png" alt="">82,000</h2>
+                <p>Read tens of thousands of reviews of destinations.</p>
+            </div>
+
+            <div class="statict__thirst" data-target="4000000">
+                <h2><img src="./img/Bicycle.png" alt="">4,000,000</h2>
+                <p>Visited by millions of travellers every single day.</p>
+            </div>
+
+        </div>
+                <div class="pricing_plan">
+                    <h1>Тарифні плани</h1>
+                    <p class="pricing_plan__p">Наші тарифні плани включають готелі, екскурсії, харчування, транспорт.</p>
+                    <div class="pricing-table">
+                      <div class="pricing-card">
+                        <h2>Базовий План</h2>
+                        <h3>$200/year</h3>
+                        <p class="price">or $20/month</p>
+                        <ul>
+                          <li>Доступ до стандартних турів</li>
+                          <li>Онлайн підтримка</li>
+                          <li>Рекомендації по маршрутах</li>
+                        </ul>
+                        <button>Get started</button>
+                      </div>
+                      <div class="pricing-card">
+                        <h2>Бізнес План</h2>
+                        <h3>$299/year</h3>
+                        <p class="price">or $29/month</p>
+                        <ul>
+                          <li>Доступ до популярних турів</li>
+                          <li>Цілодобова підтримка клієнтів</li>
+                          <li>Персональні консультації</li>
+                          <li>Знижки на групові тури</li>
+                        </ul>
+                        <button>Get started</button>
+                      </div>
+                      <div class="pricing-card">
+                        <h2>План Підприємства</h2>
+                        <h3>499$/year</h3>
+                        <p class="price">or 49/month</p>
+                        <ul>
+                          <li>Доступ до ексклюзивних турів</li>
+                          <li>Пріоритетна підтримка клієнтів</li>
+                          <li>Персоналізовані маршрути</li>
+                          <li>Знижки на додаткові послуги</li>
+                        </ul>
+                        <button>Email Us</button>
+                      </div>
+                    </div>
+                </div>
+<!-- team -->
+<div class="container__team">
+    <h1>Meet Our Team</h1>
+    <div class="team-member">
+        <img src="./img/гліб.jpg" alt="John Doe" class="team-member-image">
+        <div class="team-member-info">
+            <h3 class="team-member-name">ГЛІБ</h3>
+            <p class="team-member-role">Founder & CEO</p>
+            <p class="team-member-description">Простий ГЛІБ</p>
+
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="./img/гліб.jpg" alt="Jane Smith" class="team-member-image">
+        <div class="team-member-info">
+            <h3 class="team-member-name">гЛіБ</h3>
+            <p class="team-member-role">Head of Operations</p>
+            <p class="team-member-description">Простий ГЛІБ</p>
+
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="./img/гліб.jpg" alt="Jane Smith" class="team-member-image">
+        <div class="team-member-info">
+            <h3 class="team-member-name">гліб</h3>
+            <p class="team-member-role">Head of Operations</p>
+            <p class="team-member-description">Простий ГЛІБ</p>
+
+        </div>
+    </div>
+    <div class="team-member">
+        <img src="./img/гліб.jpg" alt="Jane Smith" class="team-member-image">
+        <div class="team-member-info">
+            <h3 class="team-member-name">Гліб</h3>
+            <p class="team-member-role">Head of Operations</p>
+            <p class="team-member-description">Простий ГЛІБ</p>
+        </div>
+    </div>
+</div>
+
+        <div class="feedBack">
+            <div id="feedback-list">
+            </div>
+        
+            <div id="add-feedback">
+                <h2>Добавити відгук</h2>
+                <form id="feedback-form">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="message">Повідомлення</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="button" id="submit-feedback" class="submit-feedbackBTN">відправити</button>
+                </form>
+            </div>
+        </div>
+        <div class="captcha">
+            <h1>Перетягніть блок в право</h1>
+        <div class="captcha-slider"></div>
+        <p  class="result">.</p>
+        </div>
+        
+</main>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            
+            <div class="footer-logo">
+                <img src="./img/horizonseekers.jpg" alt="Логотип Туристичного Агентства">
+            </div>
+            
+           
+            <div class="footer-contacts">
+                <p>Адреса: вул. Центральна, 123, Київ, Україна</p>
+                <p>Телефон: +38 (012) 345-67-89</p>
+                <p>Email: <a href="mailto:horizonseekers8@gmail.com" class="email_footer">horizonseekers8@gmail.com</a></p>
+            </div>
+
+            
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/profile.php?id=61561468375450" aria-label="Facebook" class="social-link">FB</a>
+                <a href="https://www.instagram.com/horizonseekerstravelagency/" aria-label="Instagram" class="social-link">IG</a>
+                <a href="https://x.com/seekers_ho87802" aria-label="X" class="social-link">X</a>
+            </div>
+        </div>
+        
+       
+        <div class="footer-bottom">
+            <p>&copy; 2024 Horizon Seekers. Всі права захищені.</p>
+        </div>
+    </div>
+</footer>
+<!-- end -->
+<script src="./about-us.js"></script>
+</body>
+</html>
