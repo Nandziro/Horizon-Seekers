@@ -15,39 +15,28 @@
 <body>
     <div id="loader" class="loader"></div>
     <!-- header -->
-    <header>
-        <h1>Horizon Seekers</h1>
-    <!-- модалка -->
-    <div class="modal" id="registration-modal">
-        <form class="form" action="">
-            <h1 class="form__title">LOGIN</h1>
-            <label  class="form__lable">Write your Username!</label>
-            <input type="name" class="form__name" id="username" placeholder="Your Username..." name="" id="">
-            
-            <label class="form__lable" for="">Write your Email!</label>
-            <input class="form__email" placeholder="Your Email..." type="email">
-            
-            <label class="form__lable" for="">Write your Password!</label>
-            <input class="form__pas" placeholder="Your password..." type="password">
-            
-            <label for="" class="form__lable">Write your Phone number</label>
-            <input type="tel" class="form__number" placeholder="your phone number">
-            
-            <div class="form__register">
-                    <input class="form__checked" type="checkbox" id="modal">
-                    
-                    
-                </div>
-            
-                
-              
-            <button class="form__btn" type="button">Зберегти</button>
-        </form>
-      </div>
-      
-      <!-- відкрити модалку -->
-      <button id="modal__btn" class="modal__btn">регистер</button>
-
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="./logo.png" alt="" class="header__logo-img">
+        </div>
+        <nav class="header__nav">
+            <a class="header__nav-link" href="">About us</a>
+            <a class="header__nav-link" href="./tours.html">Our tours</a>
+            <a class="header__nav-link" href="">Sponsors</a>
+        </nav>
+        <div class="sign__buttons">
+            <button class="header__nav-btnin">Sign in</button>
+            <div class="modal__in">
+                <div class="modal__in-title"></div>
+                <span class="modal__in-close">X</span>
+            </div>
+            <button class="header__nav-btnup">Sign up</button>
+        </div>
+        <div class="header__burger">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </div>
     </header>
 <!-- main -->
 <main>

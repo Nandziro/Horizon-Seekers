@@ -47,118 +47,7 @@ submitButton.addEventListener('click', () => {
 });
 // ідея алекса
 
-// modal
 
-let modal = document.getElementById('registration-modal');
-let openModalBtn = document.querySelector('.modal__btn')
-
-
-openModalBtn.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-   
-   modal.style.display = 'none';
-  }
-});
-// register
-let eMail = document.querySelector(".form__email");
-let pAssword = document.querySelector(".form__pas");
-let bUtton = document.querySelector(".form__btn");
-let cHeckbox = document.querySelector(".form__checked");
-
-eMail.addEventListener("input", function () {
-  let emailValue = eMail.value;
-
-  if (
-    emailValue.length > 5 &&
-    emailValue.includes("@") &&
-    emailValue.includes(".")
-  ) {
-    eMail.classList.add("active");
-    eMail.classList.remove("deactive");
-  } else if (emailValue.length === 0) {
-    eMail.classList.remove("deactive");
-    eMail.classList.remove("active");
-  } else {
-    eMail.classList.remove("active");
-    eMail.classList.add("deactive");
-  }
-});
-
-pAssword.addEventListener("input", function () {
-  let passwordValue = pAssword.value;
-  let passwordFirstChar = passwordValue[0];
-
-  if (
-    passwordValue.length > 8 &&
-    passwordFirstChar === passwordFirstChar.toUpperCase()
-  ) {
-    pAssword.classList.remove("deactive");
-    pAssword.classList.add("active");
-  } else if (passwordValue.length === 0) {
-    pAssword.classList.remove("deactive");
-    pAssword.classList.remove("active");
-  } else {
-    pAssword.classList.remove("active");
-    pAssword.classList.add("deactive");
-  }
-});
-
-bUtton.addEventListener("click", function () {
-  let eMail = document.querySelector(".form__email");
-  let pAssword = document.querySelector(".form__pas");
-  let cHeckbox = document.querySelector(".form__checked");
-  let naMe = document.querySelector(".form__name");
-  let ascNumber = document.querySelector(".form__number");
-
-  let checKed = cHeckbox.value;
-  let emailValue = eMail.value;
-  let passwordValue = pAssword.value;
-  let nameValue = naMe.value;
-  let newNumberValue = ascNumber.value;
-
-  if (
-    emailValue.length < 5 &&
-    !emailValue.includes("@") &&
-    !emailValue.includes(".")
-  ) {
-    
-    let modalkaEMail = document.querySelector('.form__modalka_email')
-    modalkaEMail.classList.add("open");
-    eMail.classList.add("active");
-    eMail.classList.remove("deactive");
-    return;
-  } else if (passwordValue.length < 7) {
-    let modalkaPassword = document.querySelector('.form__modalka_password')
-    
-    modalkaPassword.classList.add("open");
-    pAssword.classList.remove("deactive");
-    pAssword.classList.add("active");
-    
-    return;
-  } else if (nameValue.length === 0) {
-    let modalkaName = document.querySelector('.form__modalka_name')
-    modalkaName.classList.add("open")
-    return;
-  } else if (newNumberValue.length !== 13 && !newNumberValue.includes("+")) {
-    
-    let modalkaTel = document.querySelector('.form__modalka_tel')
-    modalkaTel.classList.add("open")
-    return;
-  } else if (!cHeckbox.checked) {
-    
-    let modalkaCHECKBOX = document.querySelector('.form__modalka_checkbox')
-    modalkaCHECKBOX.classList.add("open")
-    return;
-  } else {
-      sessionStorage.setItem("nameValue", nameValue);
-    window.location.href = "./about-us.html";
-  }
-});
 // clicks
 let openClickBtn = document.querySelector('.click_btn')
 let clickModal = document.querySelector('.click__inform')
@@ -189,7 +78,7 @@ let elements = document.querySelectorAll('.about-us, .statist, .pricing_plan, .c
 
 window.addEventListener('scroll', function() {
   elements.forEach((element) => {
-    if (this.scrollY >= 100 && this.scrollY <= 5200) {
+    if (this.scrollY >= 10 && this.scrollY <= 5000) {
       element.classList.add('animate');
       element.style.transform = 'translateX(0)';
     } else {
@@ -236,3 +125,20 @@ function mouseUp() {
     resultText.classList.remove("success", "wrong");
   }, 700); 
 }
+// гліб
+//SIGN IN AND SIGN UP
+let inBtn = document.querySelector('.header__nav-btnin')
+let upBtn = document.querySelector('.header__nav-btnup')
+let inMod = document.querySelector('.modal__in')
+let inSpan = document.querySelector('.modal__in-close')
+let signBtn = document.querySelector('.sign__buttons')
+inBtn.addEventListener('click', function() {
+    inMod.classList.add("active");
+    document.body.style.cssText = `
+    overflow: hidden
+    `
+}) 
+inSpan.addEventListener('click', function(){
+    inMod.classList.remove("active");
+    document.body.style.cssText = '';
+})
