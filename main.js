@@ -14,6 +14,16 @@ inSpan.addEventListener('click', function(){
     inMod.classList.remove("active");
     document.body.style.cssText = '';
 })
+
+// BURGER
+headBurger.addEventListener('click', function() {
+    burgerMod.classList.add("burger__mod");
+    BurgSpan.style.display = "flex"
+}) 
+BurgSpan.addEventListener('click', function(){
+    burgerMod.classList.remove("burger__mod");
+    BurgSpan.style.display = "none"
+})
 //SLIDER
 let slider = document.querySelector('.slider')
 let sliderSlide = document.querySelectorAll('.slider__slide')
@@ -22,9 +32,7 @@ let currentIndex = 0
 function showTheSlide(index){
     slider.style.transform = `translateX(-${index * 100}%)`
 }
-// function colorChange(index){
-//     document.body.style.backgroundColor = colors[index]
-// }
+
 function whatTheSlide(slide){
     currentIndex = slide
     showTheSlide(currentIndex)
@@ -67,30 +75,30 @@ let accordions = [
     }
 ]
 
-// let accordion = document.querySelector('.accordion')
+let accordion = document.querySelector('.accordion')
 
-// accordions.forEach(item => {
-//     let box = document.createElement('div')
-//     let title = document.createElement('div')
-//     let content = document.createElement('div')
+accordions.forEach(item => {
+    let box = document.createElement('div')
+    let title = document.createElement('div')
+    let content = document.createElement('div')
 
-//     box.classList.add('accordion__box')
-//     title.classList.add('accordion__box-title')
-//     content.classList.add('accordion__box-info')
+    box.classList.add('accordion__box')
+    title.classList.add('accordion__box-title')
+    content.classList.add('accordion__box-info')
 
-//     title.textContent = item.title
-//     content.textContent = item.info
-//     content.style.display = 'none'
+    title.textContent = item.title
+    content.textContent = item.info
+    content.style.display = 'none'
 
-//     box.appendChild(title)
-//     box.appendChild(content)
-//     accordion.appendChild(box)
+    box.appendChild(title)
+    box.appendChild(content)
+    accordion.appendChild(box)
 
-//     title.addEventListener('click', function() {
-//         if (content.style.display === 'block') {
-//             content.style.display = 'none'
-//         } else {
-//             content.style.display = 'block'
-//         }
-//     })
-// })
+    title.addEventListener('click', function() {
+        if (content.style.display === 'block') {
+            content.style.display = 'none'
+        } else {
+            content.style.display = 'block'
+        }
+    })
+})
