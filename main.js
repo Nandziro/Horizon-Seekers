@@ -16,6 +16,17 @@ inSpan.addEventListener('click', function(){
 })
 
 // BURGER
+let headBurg = document.querySelector(".header__burger");
+let burgMod = document.querySelector(".modal__burger");
+headBurg.addEventListener('click', function(){
+    if (burgMod.style.display === "block") {
+        burgMod.style.display = "none";
+    } 
+    else {
+        burgMod.style.display = "block";
+    }
+})
+
 
 //SLIDER
 let slider = document.querySelector('.slider')

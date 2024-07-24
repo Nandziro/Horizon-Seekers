@@ -102,7 +102,7 @@
 .header__burger-line {
 }
 .burger__mod{
-    display: block;
+    display: none;
     z-index: 200;
     left: 0;
     top: 0;
@@ -110,14 +110,7 @@
     height: 300px;
     background-color: #000000;
 }
-.modal__burger-close{
-    display: none;
-    cursor: pointer;
-    text-align: right;
-    font-size: 20px;
-    margin-bottom: 10px;
 
-} 
 /* MAIN */
 .main{
     background-color: #D5F0D9;
@@ -314,6 +307,7 @@ color: #fff;
         height: 5px;
         background-color: #000000;
         margin: 5px 0;
+        transition: 0.4s;
     }
     .header__nav-link{
         display: none;
