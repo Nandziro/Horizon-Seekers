@@ -16,14 +16,7 @@ inSpan.addEventListener('click', function(){
 })
 
 // BURGER
-headBurger.addEventListener('click', function() {
-    burgerMod.classList.add("burger__mod");
-    BurgSpan.style.display = "flex"
-}) 
-BurgSpan.addEventListener('click', function(){
-    burgerMod.classList.remove("burger__mod");
-    BurgSpan.style.display = "none"
-})
+
 //SLIDER
 let slider = document.querySelector('.slider')
 let sliderSlide = document.querySelectorAll('.slider__slide')
