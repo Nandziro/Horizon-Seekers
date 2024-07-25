@@ -16,7 +16,11 @@ setTimeout(() => {
     hideLoader();
   }, 1500); 
 }, 1000); 
-
+//Logo
+let siteLogo = document.querySelector('.header__logo-box')
+siteLogo.addEventListener('click', function() {
+    window.location.href = "./index.html";
+}) 
 // feedbacke
 let submitButton = document.getElementById('submit-feedback');
 let feedbackList = document.getElementById('feedback-list');

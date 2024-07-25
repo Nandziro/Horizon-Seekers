@@ -1,3 +1,8 @@
+//LOGO
+let siteLogo = document.querySelector('.header__logo-box')
+siteLogo.addEventListener('click', function() {
+    window.location.href = "./index.html";
+}) 
 //SIGN IN AND SIGN UP
 let inBtn = document.querySelector('.header__nav-btnin')
 let upBtn = document.querySelector('.header__nav-btnup')
@@ -18,6 +23,7 @@ inSpan.addEventListener('click', function(){
 // BURGER
 let headBurg = document.querySelector(".header__burger");
 let burgMod = document.querySelector(".modal__burger");
+let burgClose = document.querySelector(".header__burger-close");
 headBurg.addEventListener('click', function(){
     if (burgMod.style.display === "block") {
         burgMod.style.display = "none";
@@ -26,7 +32,9 @@ headBurg.addEventListener('click', function(){
         burgMod.style.display = "block";
     }
 })
-
+burgClose.addEventListener('click', function(){
+    burgMod.style.display = "none";
+})
 
 //SLIDER
 let slider = document.querySelector('.slider')
@@ -101,7 +109,8 @@ accordions.forEach(item => {
     title.addEventListener('click', function() {
         if (content.style.display === 'block') {
             content.style.display = 'none'
-        } else {
+        } 
+        else {
             content.style.display = 'block'
         }
     })
