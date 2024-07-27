@@ -662,6 +662,7 @@ body {
 .animate {
   opacity: 1;
   transition: 0.6s;
+  overflow: hidden;
 }
 /* modal */
 .header {
