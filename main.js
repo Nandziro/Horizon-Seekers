@@ -1,4 +1,8 @@
-///SIGN IN AND SIGN UP
+let siteLogo = document.querySelector('.header__logo-box')
+siteLogo.addEventListener('click', function() {
+    window.location.href = "./index.html";
+}) 
+//SIGN IN AND SIGN UP
 let inBtn = document.querySelector('.header__nav-btnin')
 let upBtn = document.querySelector('.header__nav-btnup')
 let inMod = document.querySelector('.modal__in')
