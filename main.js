@@ -1,14 +1,12 @@
-//LOGO
-let siteLogo = document.querySelector('.header__logo-box')
-siteLogo.addEventListener('click', function() {
-    window.location.href = "./index.html";
-}) 
 //SIGN IN AND SIGN UP
 let inBtn = document.querySelector('.header__nav-btnin')
 let upBtn = document.querySelector('.header__nav-btnup')
 let inMod = document.querySelector('.modal__in')
 let inSpan = document.querySelector('.modal__in-close')
 let signBtn = document.querySelector('.sign__buttons')
+let headBurger = document.querySelector('.header__burger')
+let burgerMod = document.querySelector('.modal__burger')
+let BurgSpan = document.querySelector('.modal__burger-close')
 inBtn.addEventListener('click', function() {
     inMod.classList.add("active");
     document.body.style.cssText = `
@@ -21,21 +19,14 @@ inSpan.addEventListener('click', function(){
 })
 
 // BURGER
-let headBurg = document.querySelector(".header__burger");
-let burgMod = document.querySelector(".modal__burger");
-let burgClose = document.querySelector(".header__burger-close");
-headBurg.addEventListener('click', function(){
-    if (burgMod.style.display === "block") {
-        burgMod.style.display = "none";
-    } 
-    else {
-        burgMod.style.display = "block";
-    }
+headBurger.addEventListener('click', function() {
+    burgerMod.classList.add("burger__mod");
+    BurgSpan.style.display = "flex"
+}) 
+BurgSpan.addEventListener('click', function(){
+    burgerMod.classList.remove("burger__mod");
+    BurgSpan.style.display = "none"
 })
-burgClose.addEventListener('click', function(){
-    burgMod.style.display = "none";
-})
-
 //SLIDER
 let slider = document.querySelector('.slider')
 let sliderSlide = document.querySelectorAll('.slider__slide')
@@ -44,7 +35,9 @@ let currentIndex = 0
 function showTheSlide(index){
     slider.style.transform = `translateX(-${index * 100}%)`
 }
-
+// function colorChange(index){
+//     document.body.style.backgroundColor = colors[index]
+// }
 function whatTheSlide(slide){
     currentIndex = slide
     showTheSlide(currentIndex)
@@ -109,8 +102,7 @@ accordions.forEach(item => {
     title.addEventListener('click', function() {
         if (content.style.display === 'block') {
             content.style.display = 'none'
-        } 
-        else {
+        } else {
             content.style.display = 'block'
         }
     })
