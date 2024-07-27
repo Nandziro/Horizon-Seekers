@@ -138,9 +138,6 @@ submitButton.addEventListener('click', () => {
         alert("Будь ласка, заповніть поля імені та повідомлення.");
     }
 });
-// ідея алекса
-
-
 // clicks
 let openClickBtn = document.querySelector('.click_btn')
 let clickModal = document.querySelector('.click__inform')
@@ -218,10 +215,7 @@ function mouseUp() {
     resultText.classList.remove("success", "wrong");
   }, 700); 
 }
-// гліб
-//SIGN IN AND SIGN UP
 
-// модалка +
 
 
 
