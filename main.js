@@ -15,9 +15,6 @@ let modalNick = document.querySelector('.modal_in-nick')
 let modalCheck = document.querySelector('.modal__in-check')
 let modalButton = document.querySelector('.modal__in-btn')
 
-let nickValue = modalNick.value;
-let passValue = modalPass.value;
-let checkValue = modalCheck.value;
 inBtn.addEventListener('click', function() {
     inMod.classList.add("active");
     document.body.style.cssText = `
@@ -43,30 +40,27 @@ upSpan.addEventListener('click', function(){
 
 
 modalButton.addEventListener('click', function(){
-    if(passValue.length < 7){
-        let passModal = document.createElement('div')
-        passModal.classList.add('pass__in-modal')
-        passModal.textContent = 'В паролі має міститися більше 7 символів'
-        setTimeout(function(){
-            passModal.classList.remove('pass__in-modal')
-        },3000)
-        return;
-    }
-    else if(nickValue.length === 0){
-        let nickModal = document.createElement('div')
-        nickModal.classList.add('nick__in-modal')
-        nickModal.textContent = 'Нік має містити якісь літери'
+    
+    let nickValue = modalNick.value;
+    let passValue = modalPass.value;
+    let checkValue = modalCheck.value;
+    if(nickValue.length === 0){
+        alert('Нік має містити якісь літери')
         setTimeout(function(){
             nickModal.classList.add('nick__in-modal')
         },3000)
         return;
     }
-    else if(!checkValue.checked){
-        let checkModal = document.createElement('div')
-        checkModal.classList.add('check__in-modal')      
-        checkModal.textContent = 'Натисніть будь ласка на галочку'
+    else if(passValue.length < 7){
+        alert('В паролі має міститися більше 7 символів')
         setTimeout(function(){
-            checkModal.classList.add('check__in-modal')        
+            passModal.classList.remove('pass__in-modal')
+        },3000)
+        return;
+    }
+    else if(checkValue.checked){
+        alert('Натисніть будь ласка на галочку')
+        setTimeout(function(){     
         },3000)
         return;
     }
